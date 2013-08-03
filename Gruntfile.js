@@ -30,15 +30,15 @@ module.exports = function(grunt) {
 
         dist: {
               files: {
-                'with/magic.html': ['without/magic.html']
+                '<%= pkg.dest %>/magic.html': ['<%= pkg.src %>/magic.html']
               }
         }
     },
     montage: {
         simple: {
             files: {
-                "without/img/sprites": [
-                    "without/img/sprites/*.png"
+                "<%= pkg.src %>/img/sprites": [
+                    "wi<%= pkg.src %>thout/img/sprites/*.png"
                 ]
             },
             options: {
@@ -112,7 +112,7 @@ module.exports = function(grunt) {
   htmlcompressor: {
       compile: {
         files: {
-          'with/magic.html': 'with/magic.html'
+          '<%= pkg.dest %>/magic.html': '<%= pkg.dest %>/magic.html'
         },
         options: {
           type: 'html',
