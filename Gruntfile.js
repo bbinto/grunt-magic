@@ -27,7 +27,6 @@ module.exports = function(grunt) {
       }
     }, 
     processhtml: {
-
         dist: {
               files: {
                 '<%= pkg.dest %>/magic.html': ['<%= pkg.src %>/magic.html']
@@ -58,7 +57,7 @@ module.exports = function(grunt) {
         report: 'gzip'
       },
        dist: {
-        files: {
+        files: { // can be simplified
           '<%= pkg.dest %>/js/<%= pkg.name %>.min.js': '<%= concat.js.dest %>',
           '<%= pkg.dest %>/js/slider/jquery.cycle.all.js': '<%= pkg.src %>/js/slider/jquery.cycle.all.js',
           '<%= pkg.dest %>/js/slider/jquery.easing.1.3.js': '<%= pkg.src %>/js/slider/jquery.easing.1.3.js'
@@ -90,7 +89,7 @@ module.exports = function(grunt) {
         options: {                       
           optimizationLevel: 7
         },
-        files: {
+        files: { //can be simplified
           '<%= pkg.dest %>/img/slideshow/creepy-willy-wonka.jpg': '<%= pkg.src %>/img/slideshow/creepy-willy-wonka.jpg',
           '<%= pkg.dest %>/img/slideshow/david-c.jpg': '<%= pkg.src %>/img/slideshow/david-c.jpg',
           '<%= pkg.dest %>/img/slideshow/grumpy-cat.jpg': '<%= pkg.src %>/img/slideshow/grumpy-cat.jpg',
@@ -147,9 +146,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-processhtml");
 
 
-
-
-  // run your tasks in this order
+  // run tasks in this order
   grunt.registerTask('default', ['clean', 'concat', 'uglify', 'cssmin', 'imagemin','montage', 'copy', 'imageEmbed', 'processhtml', 'useminPrepare', 'usemin', 'htmlcompressor','exec:spofcheck']);
  
  }
