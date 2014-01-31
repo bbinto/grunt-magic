@@ -10,7 +10,7 @@ This repo is supposed to illustrate how you can use grunt to automatically optim
 
 URL to sample page
 - Without magic (http://www.cbc.ca/m/0/tools/perf/grunt/without/magic.html)
-- With magic (http://www.cbc.ca/m/0/tools/perf/grunt/without/magic.html)
+- With magic (http://www.cbc.ca/m/0/tools/perf/grunt/with/magic.html)
 
 WebpageTest Results
 - Without magic: http://www.webpagetest.org/result/130803_Y8_7VW/
